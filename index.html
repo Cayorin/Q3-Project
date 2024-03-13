@@ -57,6 +57,18 @@
 		   color: white;
 		   text-align: center;
 		}
+
+		#references { 
+		font-family: "Roboto", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		margin-bottom:15px;
+	}
+
+		#btn {
+			margin-bottom:15px;
+			margin-left:15px;
+		}
 	</style>
 </head>
 <body>
@@ -92,7 +104,7 @@
   </div>
 </nav>
 
-<div class="container-fluid mt-3">
+<div class="container-fluid mt-3" style="margin-bottom:15px;">
 	<i>About the artist:</i>
 	<h3>The Weeknd</h3>
 	<div class="alert alert-info" role="alert">This artist, The Weeknd, has 114,219,177 monthly listeners, according to <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ">Spotify</a>.</div>
@@ -116,9 +128,10 @@
 			</td>
 		</tr>
 		<tr>
-			<td><div class="dropdown">
-				  <button class="btn btn-dark text-white" style="align-self:center;">Find Him on</button>
-				  <div class="dropdown-content">
+			<td>
+				<div class="dropdown">
+				  <button class="btn btn-dark text-white" data-toggle="dropdown" role="button" style="margin-left:80px; height: 45px;">Find Him on</button>
+				  <div class="dropdown-content" style="text-align:center !important; margin-left:55px;">
 				    <a href="https://www.instagram.com/theweeknd">Instagram</a>
 				    <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ">Spotify</a>
 				    <a href="https://www.youtube.com/channel/UC0WP5P-ufpRfjbNrmOWwLBQ">Youtube</a>
@@ -136,11 +149,32 @@
 		<img src="https://media.cdr.nl/COVER/MEDIUM/FRONT/JK245085/After-hours.jpg" height="250" class="rounded-circle" width="300">
 	</center>
 </div>
+<hr>
+<button id="btn" class="btn btn-dark text-white" onclick="myFunction()" aria-haspopup="true" aria-expanded="false">References</button>
+	<div id="references">
+		<ul>
+			<li><a href="https://www.biography.com/musicians/the-weeknd">Info about the Weeknd</a></li>
+			<li><a href="https://hips.hearstapps.com/hmg-prod/images/the-weeknd.jpg?resize=980:*">Image of the Weeknd</a></li>
+			<li><a href="https://i.iheart.com/v3/re/new_assets/57e2dc239e18ff63a027663e?ops=gravity(%22north%22),fit(1200,675),quality(65)">Image of the Album, "Starboy"</a></li>
+			<li><a href="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F03%2Fthe-weeknd-house-of-balloons-album-stream-000.jpg?w=960&cbr=1&q=90&fit=max"?>Image of the Album, "House of Balloons"</a></li>
+			<li><a href="https://media.cdr.nl/COVER/MEDIUM/FRONT/JK245085/After-hours.jpg">Image of the Album, "After Hours"</a>
+	</div>
 <div class="footer">
 	<p>Follow Him on</p>
 	<a href="https://twitter.com/theweeknd"><img src="https://store-images.s-microsoft.com/image/apps.60673.9007199266244427.4d45042b-d7a5-4a83-be66-97779553b24d.5d82b7eb-9734-4b51-b65d-a0383348ab1b" width="50" height="50" class="rounded-circle"></a>
 	<a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"><img src="https://i.scdn.co/image/ab6775700000ee85fb78f4e25770181942f54eb0" width="50" height="50" class="rounded-circle"></a>
 	<a href="https://www.youtube.com/channel/UC0WP5P-ufpRfjbNrmOWwLBQ"><img src="https://yt3.googleusercontent.com/584JjRp5QMuKbyduM_2k5RlXFqHJtQ0qLIPZpwbUjMJmgzZngHcam5JMuZQxyzGMV5ljwJRl0Q=s900-c-k-c0x00ffffff-no-rj" width="50" height="50" class="rounded-circle"></a>
 </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("references");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } 
+  else {
+    x.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
