@@ -9,9 +9,22 @@
   	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<title>ICT PROJECT - The Weeknd</title>
 
 	<style>
+		body {
+			background: #ffffff;
+			background: linear-gradient(0deg,#ffffff 0%, #000000 20%);
+			background: -webkit-linear-gradient(0deg,#ffffff 0%, #000000 20%);
+			background: -moz-linear-gradient(0deg,#ffffff 0%, #000000 20%);
+		}
 		.margin {
 			margin-top:10px;
 			margin-bottom:10px;
@@ -69,6 +82,13 @@
 			margin-bottom:15px;
 			margin-left:15px;
 		}
+
+		#head {
+		  font-family: "Oswald", sans-serif;
+		  font-optical-sizing: auto;
+		  font-weight: 500;
+		  font-style: normal;
+		}
 	</style>
 </head>
 <body>
@@ -95,10 +115,6 @@
             <li><a class="dropdown-item" href="https://open.spotify.com/album/4yP0hdKOZPNshxUOjY0cZj?si=ugHNJCeKQhqyv0vQ_FjOyw">After Hours</a></li>
           </ul>
         </li>
-        <form class="d-flex">
-	        <input class="form-control me-2" type="text" placeholder="Search">
-	        <button class="btn btn-primary" type="button">Search</button>
-    	</form>
       </ul>
     </div>
   </div>
@@ -106,12 +122,12 @@
 
 <div class="container-fluid mt-3" style="margin-bottom:15px;">
 	<i>About the artist:</i>
-	<h3>The Weeknd</h3>
+	<h1 id="head" style="color:white; text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">The Weeknd</h3>
 	<div class="alert alert-info" role="alert">This artist, The Weeknd, has 114,219,177 monthly listeners, according to <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ">Spotify</a>.</div>
 <table class="table table-borderless">
 	<thead>
 		<tr>
-			<th colspan="2"><h4 class="margin">The Weeknd</h4></th>
+			<th colspan="2"><h4 id="head" class="margin">The Weeknd</h4></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -142,23 +158,38 @@
 	</tbody>
 </table>
 <hr>
-<center><h5>The Weeknd</h5></center>
+<div data-aos="flip-left">
+<center><h3 id="head" style="color:white; font-weight:700;">The Weeknd</h5></center>
+</div>
 	<center>
-		<img src="https://i.iheart.com/v3/re/new_assets/57e2dc239e18ff63a027663e?ops=gravity(%22north%22),fit(1200,675),quality(65)" height="250" width="300" class="rounded-circle">
-		<img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F03%2Fthe-weeknd-house-of-balloons-album-stream-000.jpg?w=960&cbr=1&q=90&fit=max" height="250" class="rounded-circle" width="300"> 
-		<img src="https://media.cdr.nl/COVER/MEDIUM/FRONT/JK245085/After-hours.jpg" height="250" class="rounded-circle" width="300">
+		<div data-aos="fade-right"><img src="https://i.iheart.com/v3/re/new_assets/57e2dc239e18ff63a027663e?ops=gravity(%22north%22),fit(1200,675),quality(65)" height="250" width="300" class="rounded-circle">
+		<img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F03%2Fthe-weeknd-house-of-balloons-album-stream-000.jpg?w=960&cbr=1&q=90&fit=max" height="250" class="rounded-circle" width="300">
+		<img src="https://media.cdr.nl/COVER/MEDIUM/FRONT/JK245085/After-hours.jpg" height="250" class="rounded-circle" width="300"></div>
 	</center>
 </div>
 <hr>
-<button id="btn" class="btn btn-dark text-white" onclick="myFunction()" aria-haspopup="true" aria-expanded="false">References</button>
+<div class="container" style="margin-bottom:15px;">
+	<form class="d-flex">
+	    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+	    <button class="btn btn-info" type="submit">Search</button>
+	</form>
+</div>
+<div data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0">
+<button id="btn" class="btn btn-dark text-white" onclick="myFunction()" aria-haspopup="true" aria-expanded="false">References</button> 
+<!--Click the button to make the references appear or disappear-->
 	<div id="references">
 		<ul>
-			<li><a href="https://www.biography.com/musicians/the-weeknd">Info about the Weeknd</a></li>
-			<li><a href="https://hips.hearstapps.com/hmg-prod/images/the-weeknd.jpg?resize=980:*">Image of the Weeknd</a></li>
-			<li><a href="https://i.iheart.com/v3/re/new_assets/57e2dc239e18ff63a027663e?ops=gravity(%22north%22),fit(1200,675),quality(65)">Image of the Album, "Starboy"</a></li>
-			<li><a href="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F03%2Fthe-weeknd-house-of-balloons-album-stream-000.jpg?w=960&cbr=1&q=90&fit=max"?>Image of the Album, "House of Balloons"</a></li>
-			<li><a href="https://media.cdr.nl/COVER/MEDIUM/FRONT/JK245085/After-hours.jpg">Image of the Album, "After Hours"</a>
+			<li><a href="https://www.biography.com/musicians/the-weeknd" style="color:white;">Info about the Weeknd</a></li>
+			<li><a href="https://hips.hearstapps.com/hmg-prod/images/the-weeknd.jpg?resize=980:*" style="color:white;">Image of the Weeknd</a></li>
+			<li><a href="https://i.iheart.com/v3/re/new_assets/57e2dc239e18ff63a027663e?ops=gravity(%22north%22),fit(1200,675),quality(65)" style="color:white;">Image of the Album, "Starboy"</a></li>
+			<li><a href="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F03%2Fthe-weeknd-house-of-balloons-album-stream-000.jpg?w=960&cbr=1&q=90&fit=max" style="color:white;">Image of the Album, "House of Balloons"</a></li>
+			<li><a href="https://media.cdr.nl/COVER/MEDIUM/FRONT/JK245085/After-hours.jpg" style="color:white;">Image of the Album, "After Hours"</a></li>
+		</ul>
 	</div>
+</div>
 <div class="footer">
 	<p>Follow Him on</p>
 	<a href="https://twitter.com/theweeknd"><img src="https://store-images.s-microsoft.com/image/apps.60673.9007199266244427.4d45042b-d7a5-4a83-be66-97779553b24d.5d82b7eb-9734-4b51-b65d-a0383348ab1b" width="50" height="50" class="rounded-circle"></a>
@@ -176,5 +207,15 @@ function myFunction() {
   }
 }
 </script>
-</body>
+<script>
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+  </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body> 
 </html>
