@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="jquery-3.7.1.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  	<!--fonts-->
   	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -15,60 +17,54 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<title>ICT PROJECT - The Weeknd</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<title>ICT PROJECT - The Weeknd</title> <!--requires internet to function as intended-->
 
 	<style>
 		body {
-			background: #ffffff;
-			background: linear-gradient(0deg,#ffffff 0%, #000000 20%);
-			background: -webkit-linear-gradient(0deg,#ffffff 0%, #000000 20%);
-			background: -moz-linear-gradient(0deg,#ffffff 0%, #000000 20%);
+			background-color: #191414;
+		}
+
+		a {
+			text-decoration: none;
+			color:black;
 		}
 		.margin {
 			margin-top:10px;
 			margin-bottom:10px;
 		}
 
-		.roboto-regular {
-		  font-family: "Roboto", sans-serif;
-		  font-weight: 400;
+		.text-font {
+		  font-family: "Noto Serif Georgian", serif;
+		  font-optical-sizing: auto;
+		  font-weight: <weight>;
 		  font-style: normal;
+		  font-variation-settings:"wdth" 100;
 		}
-
-
-		.dropdown {
-		  position: relative;
-		  display: inline-block;
-		}
-		.dropdown-content {
-		  display: none;
-		  position: absolute;
-		  background-color: #f1f1f1;
-		  min-width: 160px;
-		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		  z-index: 1;
-		}
-		.dropdown-content a {
-		  color: black;
-		  padding: 12px 16px;
-		  text-decoration: none;
-		  display: block;
-		}
-		.dropdown-content a:hover {background-color: #ddd;}
-
-		.dropdown:hover .dropdown-content {display: block;}
-
-		.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 		.footer {
 		   position: relative;
 		   left: 0;
 		   bottom: 0;
 		   width: 100%;
-		   background-color: black;
-		   color: white;
+		   background-color: white;
+		   color: black;
 		   text-align: center;
+		   font-family: "Roboto", sans-serif;
+			font-weight: 400;
+			font-style: normal;
+			margin-bottom:15px;
+		}
+
+		#go-to-the-center {
+			display: flex;
+			justify-content: center;
+			flex-wrap:wrap;
+			margin: auto;
+			text-align: center;
+			width:150px;
 		}
 
 		#references { 
@@ -77,6 +73,13 @@
 		font-style: normal;
 		margin-bottom:15px;
 	}
+
+		#img {
+			margin-left: 20px; 
+			margin-right: 20px;
+			height: 250px;
+			width: 300px;
+		}
 
 		#btn {
 			margin-bottom:15px;
@@ -88,7 +91,8 @@
 		  font-optical-sizing: auto;
 		  font-weight: 500;
 		  font-style: normal;
-		}
+		} 
+		/*I used id instead of class because of some complications with bootstrap*/ 
 	</style>
 </head>
 <body>
@@ -121,66 +125,70 @@
 </nav>
 
 <div class="container-fluid mt-3" style="margin-bottom:15px;">
-	<i>About the artist:</i>
-	<h1 id="head" style="color:white; text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">The Weeknd</h3>
+	<i style="color:whitesmoke;">About the artist:</i>
+		<h1 id="head" style="color:white; text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">The Weeknd</h1>
 	<div class="alert alert-info" role="alert">This artist, The Weeknd, has 114,219,177 monthly listeners, according to <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ">Spotify</a>.</div>
-<table class="table table-borderless">
-	<thead>
-		<tr>
-			<th colspan="2"><h4 id="head" class="margin">The Weeknd</h4></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td rowspan="2">
-				<p class="roboto-regular">Abel Tesfaye, also known as the Weeknd, was born on February 16, 1990, in Toronto Canada. His first album was House of Balloons, which got publicized during 2011. He also holds four grammy awards.</p>
+		<table class="table table-borderless table-dark text-white">
+			<thead>
+				<tr>
+					<th colspan="2"><h4 id="head" class="margin">The Weeknd</h4></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan="2">
+						<p class="text-font">Abel Tesfaye, also known as the Weeknd, was born on February 16, 1990, in Toronto Canada. His first album was House of Balloons, which got publicized during 2011. He also holds four grammy awards.</p>
 
-				<p class="roboto-regular">In 2015, the Weeknd enjoyed huge success with the Grammy-winning album Beauty Behind the Madness, which boasted the hit single “Can’t Feel My Face.” His follow-up album, Starboy (2016), also won a Grammy and featured collaborations with artists such as Daft Punk.</p>
+						<p class="text-font">In 2015, the Weeknd enjoyed huge success with the Grammy-winning album Beauty Behind the Madness, which boasted the hit single “Can’t Feel My Face.” His follow-up album, Starboy (2016), also won a Grammy and featured collaborations with artists such as Daft Punk.</p>
 
-				<p class="roboto-regular">He is the son of Ethiopian immigrants but has had little contact with his father, who left the family when the Weeknd was only a toddler. His early musical influences ranged from traditional Ethiopian music to the "King of Pop," Michael Jackson. In an interview with Vanity Fair, the Weeknd specifically cited the impact of Jackson’s 1979 hit "Don’t Stop ‘til You Get Enough," describing it as "the song that helped me find my voice. It’s the reason I sing.”</p>
-			</td>
-			<td>
-				<img src="https://hips.hearstapps.com/hmg-prod/images/the-weeknd.jpg?resize=980:*" width="300" height="300" alt="Photo of the Weeknd">
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="dropdown">
-				  <button class="btn btn-dark text-white" data-toggle="dropdown" role="button" style="margin-left:80px; height: 45px;">Find Him on</button>
-				  <div class="dropdown-content" style="text-align:center !important; margin-left:55px;">
-				    <a href="https://www.instagram.com/theweeknd">Instagram</a>
-				    <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ">Spotify</a>
-				    <a href="https://www.youtube.com/channel/UC0WP5P-ufpRfjbNrmOWwLBQ">Youtube</a>
-				  </div>
-				</div>
-			</td>
-		</tr>
-	</tbody>
-</table>
+						<p class="text-font">The Weeknd, a prominent alternative R&B musician in the music industry, was born Abel Tesfaye in Toronto, in Canada, on February 16, 1990. Despite being the son of Ethiopian immigrants, Weeknd has not spent much time with his father, who abandoned the family while he was still a kid. Traditional Ethiopian music and Michael Jackson, the "King of Pop," were among his early musical influences. Jackson's 1979 smash song "Don't Stop 'til You Get Enough" was particularly highlighted by the Weeknd in an interview with Vanity Fair, describing it as the song that helped his discover his voice and his reason for singing</p>
+
+						<h2 class="heading">The Weeknd's most popular song as of March, 2024</h2>
+						<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0VjIjW4GlUZAMYd2vXMi3b?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+					</td>
+					<td>
+						<img src="https://hips.hearstapps.com/hmg-prod/images/the-weeknd.jpg?resize=980:*" width="300" height="300" alt="Photo of the Weeknd">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						  <button type="button" class="btn btn-info text-white" id="go-to-the-center">Discover</button>
+						  <button type="button" class="btn btn-light" role="button" id="go-to-the-center"><a href="https://www.instagram.com/theweeknd">Instagram Link</a></button>
+						  <button type="button" class="btn btn-light" role="button" id="go-to-the-center"><a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ">Spotify Link</a></button>
+						  <button type="button" class="btn btn-light" role="button" id="go-to-the-center"><a href="https://www.youtube.com/channel/UC0WP5P-ufpRfjbNrmOWwLBQ">Youtube Link</a></button>
+						    <!--I used btn-light instead of the other ones because the other ones look ugly here in my opinion-->			
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div>
 <hr>
 <div data-aos="flip-left">
-<center><h3 id="head" style="color:white; font-weight:700;">The Weeknd</h5></center>
-</div>
 	<center>
-		<div data-aos="fade-right"><img src="https://i.iheart.com/v3/re/new_assets/57e2dc239e18ff63a027663e?ops=gravity(%22north%22),fit(1200,675),quality(65)" height="250" width="300" class="rounded-circle">
-		<img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F03%2Fthe-weeknd-house-of-balloons-album-stream-000.jpg?w=960&cbr=1&q=90&fit=max" height="250" class="rounded-circle" width="300">
-		<img src="https://media.cdr.nl/COVER/MEDIUM/FRONT/JK245085/After-hours.jpg" height="250" class="rounded-circle" width="300"></div>
+		<h3 id="head" style="color:white; font-weight:700; letter-spacing: 10px;">The Weeknd</h3>
 	</center>
 </div>
+	<center>
+		<div data-aos="fade-right">
+			<img src="https://i.iheart.com/v3/re/new_assets/57e2dc239e18ff63a027663e?ops=gravity(%22north%22),fit(1200,675),quality(65)" class="rounded-circle" id="img" alt="album cover of starboy">
+			<img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F03%2Fthe-weeknd-house-of-balloons-album-stream-000.jpg?w=960&cbr=1&q=90&fit=max" class="rounded-circle" id="img" alt="album cover of house of balloons">
+			<img src="https://media.cdr.nl/COVER/MEDIUM/FRONT/JK245085/After-hours.jpg" class="rounded-circle" id="img" alt="album cover of after hours"> 
+			<!--I did not use class and opted to use id because I wanted it to be circle using bootstrap-->
+		</div>
+	</center>
+
 <hr>
+
 <div class="container" style="margin-bottom:15px;">
 	<form class="d-flex">
 	    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 	    <button class="btn btn-info" type="submit">Search</button>
 	</form>
 </div>
-<div data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="300"
-     data-aos-offset="0">
+<div data-aos="fade-right">
 <button id="btn" class="btn btn-dark text-white" onclick="myFunction()" aria-haspopup="true" aria-expanded="false">References</button> 
 <!--Click the button to make the references appear or disappear-->
-	<div id="references">
+	<div data-aos="zoom-in-down" id="references">
 		<ul>
 			<li><a href="https://www.biography.com/musicians/the-weeknd" style="color:white;">Info about the Weeknd</a></li>
 			<li><a href="https://hips.hearstapps.com/hmg-prod/images/the-weeknd.jpg?resize=980:*" style="color:white;">Image of the Weeknd</a></li>
@@ -190,12 +198,12 @@
 		</ul>
 	</div>
 </div>
-<div class="footer">
-	<p>Follow Him on</p>
-	<a href="https://twitter.com/theweeknd"><img src="https://store-images.s-microsoft.com/image/apps.60673.9007199266244427.4d45042b-d7a5-4a83-be66-97779553b24d.5d82b7eb-9734-4b51-b65d-a0383348ab1b" width="50" height="50" class="rounded-circle"></a>
-	<a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"><img src="https://i.scdn.co/image/ab6775700000ee85fb78f4e25770181942f54eb0" width="50" height="50" class="rounded-circle"></a>
-	<a href="https://www.youtube.com/channel/UC0WP5P-ufpRfjbNrmOWwLBQ"><img src="https://yt3.googleusercontent.com/584JjRp5QMuKbyduM_2k5RlXFqHJtQ0qLIPZpwbUjMJmgzZngHcam5JMuZQxyzGMV5ljwJRl0Q=s900-c-k-c0x00ffffff-no-rj" width="50" height="50" class="rounded-circle"></a>
-</div>
+	<div class="footer">
+		<p>Follow Him on</p>
+		<a href="https://twitter.com/theweeknd"><img src="https://store-images.s-microsoft.com/image/apps.60673.9007199266244427.4d45042b-d7a5-4a83-be66-97779553b24d.5d82b7eb-9734-4b51-b65d-a0383348ab1b" width="50" height="50" class="rounded-circle" alt="picture of twitter logo"></a>
+		<a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"><img src="https://i.scdn.co/image/ab6775700000ee85fb78f4e25770181942f54eb0" width="50" height="50" class="rounded-circle" alt="picture of spotify logo"></a>
+		<a href="https://www.youtube.com/channel/UC0WP5P-ufpRfjbNrmOWwLBQ"><img src="https://yt3.googleusercontent.com/584JjRp5QMuKbyduM_2k5RlXFqHJtQ0qLIPZpwbUjMJmgzZngHcam5JMuZQxyzGMV5ljwJRl0Q=s900-c-k-c0x00ffffff-no-rj" width="50" height="50" class="rounded-circle" alt="picture of youtube logo"></a>
+	</div>
 <script>
 function myFunction() {
   var x = document.getElementById("references");
@@ -209,8 +217,7 @@ function myFunction() {
 </script>
 <script>
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
+import 'aos/dist/aos.css';
 AOS.init();
   </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
